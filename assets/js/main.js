@@ -57,11 +57,7 @@ console.log(studenti);
 for (var i = 0; i < studenti.length; i++) {
     //trasformo gli oggetti dell'array in array così da poterli usare con gli strumenti degli array
     var myObjectsArrayTranform = Object.values(studenti[i]);
-    //ciclo all'interno dell'array creato il mio blocco di codice per mostrare a video(o stampare in console) i primi due elementi dell'array (nome e cognome)
-    for (var i = 0; i < myObjectsArrayTranform.length -1; i++) {
-        console.log(myObjectsArrayTranform[0] + ' ' + myObjectsArrayTranform[1]);
-    }
-
+    $('#elenco_array_object').append(myObjectsArrayTranform[0] + ' ' + myObjectsArrayTranform[1] + ' ');  // facile in console come farli vedere a video utente????
 }
 
 
