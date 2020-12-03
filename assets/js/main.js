@@ -57,10 +57,17 @@ console.log(studenti);
 for (var i = 0; i < studenti.length; i++) {
     //trasformo gli oggetti dell'array in array così da poterli usare con gli strumenti degli array
     var myObjectsArrayTranform = Object.values(studenti[i]);
-    $('#elenco_array_object').append(myObjectsArrayTranform[0] + ' ' + myObjectsArrayTranform[1] + ' ');  // facile in console come farli vedere a video utente????
+    $('#elenco_array_object').append(myObjectsArrayTranform[0] + ' ' + myObjectsArrayTranform[1] + ' ');  
 }
-
-
+// Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+var cardNewStudent = [];
+var nome = prompt('inserisci il tuo nome');
+var cognome = prompt('inserisci il tuo cognome');
+var età = Number(prompt('inserisci la tu età in cifre numeriche'));
+cardNewStudent.push([nome, cognome, età]);
+studenti.push(cardNewStudent)
+// Object.assign({}, ['a','b','c']); VEDERE CON FABIO
+$('#nuovo_iscritto').html(cardNewStudent)
 
 
 });
